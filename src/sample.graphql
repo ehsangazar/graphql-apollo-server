@@ -1,0 +1,59 @@
+mutation createPost {
+  createPost(title: "Hello", content: "World") {
+    id
+    title
+    content
+  }
+}
+
+query getPosts {
+  posts {
+    id
+    title
+    content
+  }
+}
+
+query getPost {
+  post(id: 1) {
+    id
+    title
+    content
+  }
+}
+
+query getPost {
+  post(id: "clux7esrh0000aww7hxrh5gxl") {
+    id
+    title
+    content
+  }
+}
+
+mutation updatePost {
+  updatePost(
+    id: "clux7esrh0000aww7hxrh5gxl"
+    title: "Hello"
+    content: "World2"
+  ) {
+    id
+    title
+    content
+  }
+}
+
+mutation deletePost {
+  deletePost(id: "clux7esrh0000aww7hxrh5gxl") {
+    id
+    title
+    content
+  }
+}
+
+query searchPosts {
+  searchPosts(query: "World2") {
+    id
+    title
+    content
+  }
+}
